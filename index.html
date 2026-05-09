@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>~~까지가 릿</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="stage" aria-label="~~까지가 릿 리듬 게임">
+        <div class="top-bar">
+          <div>
+            <p class="eyebrow">JUST TIMING</p>
+            <h1>~~까지가 릿</h1>
+          </div>
+          <div class="status-cluster">
+            <div class="level-board">
+              <span>단계</span>
+              <strong id="level">1 / 1</strong>
+            </div>
+            <div class="scoreboard" aria-live="polite">
+              <span>점수</span>
+              <strong id="score">0</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-panel">
+          <span class="prompt-label">제시어</span>
+          <strong id="target-word">-</strong>
+          <span id="next-count" class="next-count">0 / 0</span>
+        </div>
+
+        <div class="track-wrap">
+          <div class="hit-line" aria-hidden="true"></div>
+          <div id="lyric-track" class="lyric-track"></div>
+          <img id="jthis-avatar" class="jthis-avatar" src="./images/JTHIS.png" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="judgement-row">
+          <strong id="judgement">준비</strong>
+          <span id="hint">시작을 누르고 제시어가 중앙 라인에 닿는 순간 멈추세요.</span>
+        </div>
+
+        <div class="controls">
+          <button id="start-btn" type="button">시작</button>
+          <button id="stop-btn" type="button" disabled>멈춤</button>
+          <button id="reset-btn" type="button">다시</button>
+          <label class="comfort-toggle">
+            <input id="comfort-mode" type="checkbox" />
+            <span>편안 모드</span>
+          </label>
+        </div>
+
+        <div class="meter" aria-hidden="true">
+          <span class="meter-perfect">PERFECT</span>
+          <span class="meter-good">GOOD</span>
+          <span class="meter-ok">OK</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="./verses.js"></script>
+    <script src="./game.js"></script>
+  </body>
+</html>
